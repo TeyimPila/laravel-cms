@@ -15,7 +15,7 @@
 </template>
 
 <script>
-    export default {
+    exp ort default {
         mounted() {
             console.log('Component mounted.')
         }
