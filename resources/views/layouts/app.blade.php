@@ -37,8 +37,8 @@
                 </div>
 
                 <div class="navbar-end">
-                    @if(!Auth::guest())
-                        <a class="navbar-item" href="#">Login</a>
+                    @if(Auth::guest())
+                        <a class="navbar-item" href="{{route('login')}}">Login</a>
                         <a class="navbar-item" href="#">Join Our Community</a>
                     @else
                         <div class="navbar-item has-dropdown is-hoverable is-left">
@@ -52,7 +52,7 @@
                                     Notifications</a>
                                 <a class="navbar-item" href="#">
                                     <span class="icon"><i class="fa fa-fw m-r-10 fa-cogs"></i></span>
-                                     Settings</a>
+                                    Settings</a>
                                 <hr class="navbar-divider">
                                 <a class="navbar-item" href="#">
                                     <span class="icon"><i class="fa fa-fw m-r-10 fa-sign-out"></i></span>
@@ -60,45 +60,10 @@
                             </div>
                         </div>
                     @endif
-
-
                 </div>
             </div>
         </div>
     </nav>
-    {{--<nav class="navbar has-shadow na">--}}
-    {{--<div class="container">--}}
-    {{--<div class="navbar-left">--}}
-    {{--<a class="navbar-item" href="{{route('home')}}">--}}
-    {{--<h2 src="{{asset('sitelogo.png')}}" alt="DevMarketer Logo">HOME</h2>--}}
-    {{--</a>--}}
-    {{--<a href="#" class="navbar-item is-tab is-hidden-mobile">Learn</a>--}}
-    {{--<a href="#" class="navbar-item is-tab is-hidden-mobile">Discuss</a>--}}
-    {{--<a href="#" class="navbar-item is-tab is-hidden-mobile">Share</a>--}}
-    {{--</div>--}}
-    {{--<div class="navbar-right">--}}
-    {{--@if(Auth::guest())--}}
-    {{--<a href="#" class="navbar-item is-tab is-hidden-mobile">Login</a>--}}
-    {{--<a href="#" class="navbar-item is-tab is-hidden-mobile">Join the community</a>--}}
-    {{--@else--}}
-    {{--<button class="dropdown nav-item is-tab">--}}
-    {{--Hey Pila <span class="icon"><i class="fa fa-caret-down"></i></span>--}}
-    {{--</button>--}}
-
-    {{--<ul class="dropdown-menu">--}}
-    {{--<li><a href="#">Profile</a></li>--}}
-    {{--<li><a href="#">Notifications</a></li>--}}
-    {{--<li><a href="#">Settings</a></li>--}}
-    {{--<li class="separator"></li>--}}
-    {{--<li><a href="#">Logout</a></li>--}}
-    {{--</ul>--}}
-
-    {{--@endif--}}
-    {{--</div>--}}
-    {{--</div>--}}
-
-    {{--</nav>--}}
-
     @yield('content')
 </div>
 

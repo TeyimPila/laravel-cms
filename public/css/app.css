@@ -833,7 +833,7 @@ a.has-text-danger:focus {
 }
 
 .has-text-grey-light {
-  color: #b5b5b5 !important;
+  color: #afafaf !important;
 }
 
 .has-text-grey-lighter {
@@ -1443,7 +1443,7 @@ a.box:active {
 
 .button:hover,
 .button.is-hovered {
-  border-color: #b5b5b5;
+  border-color: #afafaf;
   color: #363636;
 }
 
@@ -3002,7 +3002,7 @@ a.box:active {
 .taginput .is-hovered.taginput-container.is-focusable,
 .textarea:hover,
 .textarea.is-hovered {
-  border-color: #b5b5b5;
+  border-color: #afafaf;
 }
 
 .input:focus,
@@ -3476,7 +3476,7 @@ a.box:active {
 
 .select select:hover,
 .select select.is-hovered {
-  border-color: #b5b5b5;
+  border-color: #afafaf;
 }
 
 .select select:focus,
@@ -8086,7 +8086,7 @@ a.navbar-link.is-active {
 .pagination-previous:hover,
 .pagination-next:hover,
 .pagination-link:hover {
-  border-color: #b5b5b5;
+  border-color: #afafaf;
   color: #363636;
 }
 
@@ -8128,7 +8128,7 @@ a.navbar-link.is-active {
 }
 
 .pagination-ellipsis {
-  color: #b5b5b5;
+  color: #afafaf;
   pointer-events: none;
 }
 
@@ -8524,7 +8524,7 @@ label.panel-block:hover {
 
 .tabs.is-toggle a:hover {
   background-color: whitesmoke;
-  border-color: #b5b5b5;
+  border-color: #afafaf;
   z-index: 2;
 }
 
@@ -15121,7 +15121,7 @@ label.panel-block:hover {
 }
 
 .datepicker .datepicker-table .datepicker-body .datepicker-row .datepicker-cell.is-unselectable {
-  color: #b5b5b5;
+  color: #afafaf;
 }
 
 .datepicker .datepicker-table .datepicker-body .datepicker-row .datepicker-cell.is-today {
@@ -15948,7 +15948,7 @@ label.panel-block:hover {
 }
 
 .select select optgroup {
-  color: #b5b5b5;
+  color: #afafaf;
   font-weight: 400;
   font-style: normal;
   padding: 0.25em 0;
@@ -15991,7 +15991,7 @@ label.panel-block:hover {
   width: 2.75em;
   height: 1.575em;
   padding: 0.2em;
-  background: #b5b5b5;
+  background: #afafaf;
   border-radius: 1em;
   -webkit-transition: background 150ms ease-out;
   transition: background 150ms ease-out;
@@ -16075,7 +16075,7 @@ label.panel-block:hover {
 }
 
 .switch:hover input[type=checkbox] + .check {
-  background: rgba(181, 181, 181, 0.9);
+  background: rgba(175, 175, 175, 0.9);
 }
 
 .switch:hover input[type=checkbox]:checked + .check {
@@ -16596,7 +16596,7 @@ label.panel-block:hover {
 
 .timepicker .control:nth-child(1) .select:before {
   content: ":";
-  color: #b5b5b5;
+  color: #afafaf;
   display: inline-block;
   position: absolute;
   z-index: 6;
@@ -17092,7 +17092,7 @@ label.panel-block:hover {
 }
 
 .tooltip.is-dashed {
-  border-bottom: 1px dashed #b5b5b5;
+  border-bottom: 1px dashed #afafaf;
   cursor: default;
 }
 
@@ -17123,7 +17123,7 @@ label.panel-block:hover {
   display: inline-block;
   cursor: pointer;
   padding: 0.25em;
-  border: 1px dashed #b5b5b5;
+  border: 1px dashed #afafaf;
   border-radius: 5px;
 }
 
@@ -17215,6 +17215,14 @@ label.panel-block:hover {
 .upload .upload-draggable.is-hovered.is-danger {
   border-color: #ff3860;
   background: rgba(255, 56, 96, 0.05);
+}
+
+.is-muted {
+  color: #b2b2b2 !important;
+}
+
+a.is-muted:hover {
+  color: grey !important;
 }
 
 .m-t-5 {
