@@ -39,7 +39,7 @@
                 <div class="navbar-end">
                     @if(Auth::guest())
                         <a class="navbar-item" href="{{route('login')}}">Login</a>
-                        <a class="navbar-item" href="#">Join Our Community</a>
+                        <a class="navbar-item" href="{{route('register')}}">Join Our Community</a>
                     @else
                         <div class="navbar-item has-dropdown is-hoverable is-left">
                             <a class="navbar-link" href="#">Hey Pila</a>
