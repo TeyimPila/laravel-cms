@@ -978,6 +978,11 @@ Vue.use(Buefy);
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
+var app = new Vue({
+    el: '#app',
+    data: {}
+});
+
 /***/ }),
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
