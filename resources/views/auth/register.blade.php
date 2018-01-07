@@ -15,7 +15,7 @@
                             <label for="name" class="label">Name</label>
                             <p class="control">
                                 <input class="input {{$errors->has('name')?'is-danger':'is-primary'}}" type="text"
-                                       name="email" id="name"
+                                       name="name" id="name"
                                        value="{{old('name')}}">
                             </p>
                             @if($errors->has('name'))
