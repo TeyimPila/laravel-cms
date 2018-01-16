@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="#">
-                <img src="https://bulma.io/images/bulma-logo.png"
+                <img src="{{asset('img/bulma-logo.png')}}"
                      alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
             </a>
             <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">

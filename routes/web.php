@@ -17,9 +17,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::prefix('manage')->middleware('role:superadministrator|administrator|editor|author|contributor')->group(function (){
+Route::prefix('manage')->middleware('role:superadministrator|administrator|editor|author|contributor')->group(function () {
     Route::get('/', 'ManageController@index');
     Route::get('/dashboard', 'ManageController@dashboard')->name('manage.dashboard');
+    Route::resource('/users', 'UserController');
+    Route::resource('/permissions', 'PermissionController', ['except'=>'destroy']);
+
+//    Route::get('permissions', 'PermissionController@index')->name('permissions.index');
+//    Route::get('permissions/create', 'PermissionController@create')->name('permissions.create');
+//    Route::post('permissions/store', 'PermissionController@store')->name('permissions.store');
+//    Route::get('permissions/{id}', 'PermissionController@show')->name('permissions.show');
+//    Route::get('permissions/{id}/edit', 'PermissionController@edit')->name('permissions.edit');
+//    Route::put('permissions/{id}', 'PermissionController@update')->name('permissions.update');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
