@@ -55,7 +55,6 @@
                                 <div class="content">
                                     <h2 class="title">Permissions:</h2>
                                     <ul>
-                                        {{--<b-checkbox-group v-model="permissionsSelected">--}}
                                         @foreach ($permissions as $permission)
                                             <div class="field">
                                                 <b-checkbox v-model="permissionsSelected"
