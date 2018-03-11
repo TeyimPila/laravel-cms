@@ -17,28 +17,28 @@
                             <div class="media-content">
                                 <div class="content">
                                     <h2 class="title">Role Details:</h2>
-                                        <div class="field">
-                                            <p class="control">
-                                                <label for="display_name" class="label">Name (Human Readable)</label>
-                                                <input type="text" class="input" name="display_name"
-                                                       value="{{old('display_name')}}" id="display_name">
-                                            </p>
-                                        </div>
-                                        <div class="field">
-                                            <p class="control">
-                                                <label for="name" class="label">Slug (Can not be changed)</label>
-                                                <input type="text" class="input" name="name" value="{{old('name')}}"
-                                                       id="name">
-                                            </p>
-                                        </div>
-                                        <div class="field">
-                                            <p class="control">
-                                                <label for="description" class="label">Description</label>
-                                                <input type="text" class="input" value="{{old('description')}}"
-                                                       id="description" name="description">
-                                            </p>
-                                        </div>
-                                        <input type="hidden" :value="permissionsSelected" name="permissions">
+                                    <div class="field">
+                                        <p class="control">
+                                            <label for="display_name" class="label">Name (Human Readable)</label>
+                                            <input type="text" class="input" name="display_name"
+                                                   value="{{old('display_name')}}" id="display_name">
+                                        </p>
+                                    </div>
+                                    <div class="field">
+                                        <p class="control">
+                                            <label for="name" class="label">Slug (Can not be changed)</label>
+                                            <input type="text" class="input" name="name" value="{{old('name')}}"
+                                                   id="name">
+                                        </p>
+                                    </div>
+                                    <div class="field">
+                                        <p class="control">
+                                            <label for="description" class="label">Description</label>
+                                            <input type="text" class="input" value="{{old('description')}}"
+                                                   id="description" name="description">
+                                        </p>
+                                    </div>
+                                    <input type="hidden" :value="permissionsSelected" name="permissions">
                                 </div>
                             </div>
                         </article>
@@ -55,7 +55,8 @@
                                     <h2 class="title">Permissions:</h2>
                                     @foreach ($permissions as $permission)
                                         <div class="field">
-                                            <b-checkbox v-model="permissionsSelected" :native-value="{{$permission->id}}">
+                                            <b-checkbox v-model="permissionsSelected"
+                                                        :native-value="{{$permission->id}}">
                                                 {{$permission->display_name}}<em>({{$permission->description}})</em>
                                             </b-checkbox>
                                         </div>
