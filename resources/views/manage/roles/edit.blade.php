@@ -69,7 +69,7 @@
                         </article>
                     </div> <!-- end of .box -->
 
-                    <button class="button is-primary">Save Changes to Role</button>
+                    <button class="button is-primary">Save Changes</button>
                 </div>
             </div>
         </form>
