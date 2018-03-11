@@ -1044,7 +1044,10 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
 
 var app = new Vue({
     el: '#app',
-    data: {}
+    data: {
+        auto_password: true,
+        password_option: 'keep'
+    }
 });
 
 /***/ }),

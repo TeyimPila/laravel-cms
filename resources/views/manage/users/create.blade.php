@@ -12,6 +12,7 @@
         <div class="columns">
             <div class="column">
                 <form action="{{route('users.store')}}" method="POST">
+                    {{ csrf_field() }}
                     <div class="field">
                         <label for="name" class="label">Name:</label>
                         <p class="control">
@@ -31,7 +32,7 @@
                     <div class="field">
                         <label for="password" class="label">Password:</label>
                         <p class="control">
-                            <input type="password" class="input is-primary" name="password" id="password" :disabled="auto_password">
+                            <input type="password" class="input is-primary" name="password" id="password" v-if="!auto_password">
                             <b-checkbox name="auto_generate" class="m-t-15"
                                         v-model="auto_password">Auto Generate Password
                             </b-checkbox>
@@ -48,11 +49,11 @@
 
 @section('scripts')
     <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                auto_password: true
-            }
-        });
+        // var app = new Vue({
+        //     el: '#app',
+        //     data: {
+        //         auto_password: true
+        //     }
+        // });
     </script>
 @endsection
