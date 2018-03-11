@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Permission;
 use App\Role;
 use Illuminate\Http\Request;
 
@@ -60,7 +61,10 @@ class RoleController extends Controller
      */
     public function edit($id)
     {
-       //
+       $role = Role::where('id', $id)->with('permissions')->first();
+       $permissions = Permission::all();
+
+       return view('manage.roles.edit')->withRole($role)->withPermissions($permissions);
     }
 
     /**

@@ -25,7 +25,8 @@
                     <div class="field">
                         <label for="email" class="label">Email:</label>
                         <p class="control">
-                            <input value="{{$user->email}}" type="email" class="input is-primary" name="email" id="email">
+                            <input value="{{$user->email}}" type="email" class="input is-primary" name="email"
+                                   id="email">
                         </p>
                     </div>
 
@@ -33,18 +34,25 @@
                     <div class="field">
                         <label for="password" class="label">Password:</label>
                         {{--<b-radio-group v-model="password_options">--}}
-                            <div class="field">
-                                <b-radio v-model="password_option" name="password_option" native-value="keep">Do Not Change Password</b-radio>
-                            </div>
-                            <div class="field">
-                                <b-radio v-model="password_option" name="password_option" native-value="auto">Auto-Generate New Password</b-radio>
-                            </div>
-                            <div class="field">
-                                <b-radio v-model="password_option" name="password_option" native-value="manual">Manually Set New Password</b-radio>
-                                <p class="control">
-                                    <input type="password" class="input is-primary" name="password" id="password" v-if="password_option == 'manual'"/>
-                                </p>
-                            </div>
+                        <div class="field">
+                            <b-radio v-model="password_option" name="password_option" native-value="keep">Do Not Change
+                                Password
+                            </b-radio>
+                        </div>
+                        <div class="field">
+                            <b-radio v-model="password_option" name="password_option" native-value="auto">Auto-Generate
+                                New Password
+                            </b-radio>
+                        </div>
+                        <div class="field">
+                            <b-radio v-model="password_option" name="password_option" native-value="manual">Manually Set
+                                New Password
+                            </b-radio>
+                            <p class="control">
+                                <input type="password" class="input is-primary" name="password" id="password"
+                                       v-if="password_option == 'manual'"/>
+                            </p>
+                        </div>
                         {{--</b-radio-group>--}}
                     </div>
 
@@ -56,13 +64,14 @@
     </div> <!-- End of .flex-container -->
 @endsection
 
-@section('scripts')
-    <script>
-        // var app = new Vue({
-        //     el: '#app',
-        //     data: {
-        //         auto_password: true
-        //     }
-        // });
-    </script>
-@endsection
+<script>
+    window.onload = function () {
+        var app = new Vue({
+            el: '#app',
+            data: {
+                password_option: 'keep',
+                rolesSelected: {!! $user->roles->pluck('id') !!}
+            }
+        });
+    }
+</script>

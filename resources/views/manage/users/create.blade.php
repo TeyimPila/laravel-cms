@@ -32,7 +32,8 @@
                     <div class="field">
                         <label for="password" class="label">Password:</label>
                         <p class="control">
-                            <input type="password" class="input is-primary" name="password" id="password" v-if="!auto_password">
+                            <input type="password" class="input is-primary" name="password" id="password"
+                                   v-if="!auto_password">
                             <b-checkbox name="auto_generate" class="m-t-15"
                                         v-model="auto_password">Auto Generate Password
                             </b-checkbox>
@@ -47,13 +48,13 @@
     </div> <!-- End of .flex-container -->
 @endsection
 
-@section('scripts')
-    <script>
-        // var app = new Vue({
-        //     el: '#app',
-        //     data: {
-        //         auto_password: true
-        //     }
-        // });
-    </script>
-@endsection
+<script>
+    window.onload = function () {
+        var app = new Vue({
+            el: '#app',
+            data: {
+                auto_password: true
+            }
+        });
+    }
+</script>
